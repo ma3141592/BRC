@@ -45,7 +45,7 @@
                 </a>
 
                 <h2>League Statistics</h2>
-                Stats last updated: Saturday May 16, 2026 at 16:41
+                Stats last updated: Saturday May 16, 2026 at 16:49
                 <div id="table-container" width="100%"></div>
                 <h2> Full GC stats by team
                 </h2>
@@ -117,14 +117,16 @@
             
                 // Create dropdown
                 var select = $('<select><option value=""></option></select>')
-                  .appendTo($(column.header()).empty())  // <-- puts it in HEADER
-                  .on('change', function () {
-                    var val = $.fn.dataTable.util.escapeRegex($(this).val());
+                    .on('change', function () {
+                        var val = $.fn.dataTable.util.escapeRegex($(this).val());
             
-                    column
-                      .search(val ? '^' + val + '$' : '', true, false)
-                      .draw();
-                  });
+                        column
+                          .search(val ? '^' + val + '$' : '', true, false)
+                          .draw();
+                    });
+                var header = $(column.header());
+                header.append('<br');
+                header.append(select);
             
                 // Populate with DISTINCT values
                 column.data().unique().sort().each(function (d) {
