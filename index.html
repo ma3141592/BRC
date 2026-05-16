@@ -16,6 +16,18 @@
 </head>
 
 <body>
+    <!-- Put this div wherever you want the widget to be embedded -->
+    <div id="gc-scoreboard-widget-mag6"></div>
+    <!-- Put this before the closing </body> tag -->
+    <script src="https://widgets.gc.com/static/js/sdk.v1.js"></script>
+    <script>
+        window.GC.scoreboard.init({
+            target: "#gc-scoreboard-widget-mag6",
+            widgetId: "8cbb7b32-ae50-4f82-9d43-badf7c420984",
+            maxVerticalGamesVisible: 4,
+        })
+    </script>    
+    
     <div class="container-fluid">
         <main class="row">
             <div class="col">
