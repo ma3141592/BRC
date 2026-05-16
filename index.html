@@ -92,7 +92,13 @@
             },
             datatables_options: {
                 paging: false,
-                columnDefs: [{ visible: false, targets: [8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40] }]
+                columnDefs: [{ visible: false, targets: [8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40] }],
+                columnControl: [
+                    {
+                        target: 3,
+                        content: ['search']
+                    }
+                ]
             }
             /* custom formatting for columns. See docs on csv-to-html-table
             ,
