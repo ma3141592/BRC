@@ -60,11 +60,13 @@
     <script src="js/csv_to_html_table.js"></script>
 
     <script>
+        /* This is a custom column formatting function.
         function format_link(link) {
             if (link)
                 return "<a href='" + link + "' target='_blank'>" + link + "</a>";
             else return "";
         }
+        */
 
         CsvToHtmlTable.init({
             csv_path: "data/brc-5480-leaders.csv",
@@ -75,11 +77,15 @@
                 delimiter: '"'
             },
             datatables_options: {
-                paging: false
-            },
+                paging: false,
+                columnDefs: [{ visible: false, targets: [8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40] }]
+            }
+            /* custom formatting for columns. See docs on csv-to-html-table
+            ,
             custom_formatting: [
                 [0, format_link]
             ]
+            */
         });
     </script>
 </body>
