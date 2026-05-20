@@ -14,11 +14,12 @@
     <script src="js/csv_to_html_table.js"></script>
     
     <script>
+        var pg_title = 'BRC 2026 Spring A League';
+        var pg_header = 'BRC 2026 Spring A League Page';
+        var updated_at = 'Stats last updated: Tuesday May 19, 2026 at 20:00';
+        var csv_location = 'data/brc-a-leaders.csv';
+        
         $(document).ready(function() {
-            var pg_title = 'BRC 2026 Spring A League';
-            var pg_header = 'BRC 2026 Spring A League Page';
-            var updated_at = 'Stats last updated: Tuesday May 19, 2026 at 20:00';
-            var csv_location = 'data/brc-a-leaders.csv';
             
             document.querySelector("#pg_title").textContent = pg_title;
             document.querySelector("#pg_header").textContent = pg_header;
