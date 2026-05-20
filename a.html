@@ -5,9 +5,18 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CSV to HTML Table</title>
-    <meta name="author" content="Derek Eder">
-    <meta content="Display any CSV file as a searchable, filterable, pretty HTML table">
+    <script>
+        $(document).ready(function() {
+            var pg_title = 'BRC 2026 Spring A League';
+            var pg_header = 'BRC 2026 Spring A League Page';
+            var updated_at = 'Stats last updated: Tuesday May 19, 2026 at 20:00'
+            
+            document.querySelector("#pg_title").textContent = pg_title;
+            document.querySelector("#pg_header").textContent = pg_header;
+            document.querySelector("#updated_at").textContent = updated_at;
+        });
+    </script>
+    <title id="pg_title"></title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
@@ -31,7 +40,7 @@
     <div class="container-fluid">
         <main class="row">
             <div class="col">
-                <h1>BRC 54/80 League Page</h1>
+                <h1 id="pg_header"></h1>
 <!--
                 <p>Display any CSV file as a searchable, filterable, pretty HTML table. Done in 100% JavaScript. <a
                         href="https://github.com/derekeder/csv-to-html-table">Code
@@ -43,7 +52,7 @@
                 </a>
 
                 <h2>League Statistics</h2>
-                Stats last updated: Tuesday May 19, 2026 at 20:00
+                <div id="updated_at">Stats last updated: Tuesday May 19, 2026 at 20:00</div>
                 
                 <div id="table-container" width="100%"></div>
                 <!--
